@@ -1,75 +1,84 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE html> 
+<html> 
+  <head> 
     <title>?</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <style>
-      body {
-        background-color: #111;
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <style> 
+      body { 
+        background-color: #111; 
+        color: #fff; 
+        font-family: 'Montserrat', sans-serif; 
+      } 
+      .button-container { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+      } 
+      .button { 
+        position: relative; 
+        display: inline-block; 
+        padding: 10px 20px; 
+        background-color: transparent; 
+        border: none; 
+        text-decoration: none; 
+        color: #fff; 
+        font-size: 16px; 
+        font-weight: normal; 
+        margin: 10px; 
+        transition: all 0.3s ease-in-out; 
+      } 
+      .button:hover { 
+        color: #f20c3c; 
+        font-weight: bold; 
+      } 
+      .button::before, .button::after { 
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        bottom: -5px; 
+        width: 0%; 
+        height: 3px; 
+        background-color: #f20c3c; 
+        transform: scaleX(0); 
+        transform-origin: left; 
+        transition: width 0.3s ease-in-out, transform 0.3s ease-in-out; 
+      } 
+      .button::before { 
+        transform-origin: right; 
+      } 
+      .button:hover::before { 
+        width: 100%; 
+        transform: scaleX(1); 
+      } 
+      .button:hover::after { 
+        width: 100%; 
+        transform: scaleX(0); 
+        transform-origin: right; 
+        transition-delay: 0.3s; 
       }
-      .button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .button {
-        position: relative;
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        color: #fff;
-        font-size: 16px;
-        font-weight: normal;
-        margin: 10px;
-        transition: all 0.3s ease-in-out;
-      }
-      .button:hover {
-        color: #f20c3c;
-        font-weight: bold;
-      }
-      .button::before, .button::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 0%;
-        height: 3px;
-        background-color: #f20c3c;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
-      }
-      .button::before {
-        transform-origin: right;
-      }
-      .button:hover::before {
-        width: 100%;
-        transform: scaleX(1);
-      }
-      .button:hover::after {
-        width: 100%;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition-delay: 0.3s;
+ 
+    /* Media query for mobile devices */
+      @media screen and (max-width: 480px) {
+        .button-container {
+          flex-direction: column;
+align-items: center;
+        }
       }
     </style>
-  </head>
-  <body>
-    <div class="button-container">
-      <a href="https://t.me/Entaytion" class="button">telegram</a>
-      <a href="https://instagram.com/Entaytion" class="button">instagram</a>
-      <a href="https://steamcommunity.com/id/Entaytion" class="button">steam</a>
-      <a href="http://mynickname.com/Entaytion" class="button">nickname</a>
-	  <a href="https://tiktok.com/@entaytion" class="button">tiktok</a>
-	  <a href="https://pinterest.com/entaytion" class="button">pinterest</a>
-    </div>
-	<footer>
-  <p style="font-size: 12px; text-align: center;">Copyright<br>&copy; Entaytion<br>2023</p>
-</footer>
-  </body>
+  </head> 
+  <body> 
+    <div class="button-container"> 
+      <a href="https://t.me/Entaytion" class="button">telegram</a> 
+      <a href="https://instagram.com/Entaytion" class="button">instagram</a> 
+      <a href="https://steamcommunity.com/id/Entaytion" class="button">steam</a> 
+      <a href="http://mynickname.com/Entaytion" class="button">nickname</a> 
+   <a href="https://tiktok.com/@entaytion" class="button">tiktok</a> 
+   <a href="https://pinterest.com/entaytion" class="button">pinterest</a> 
+    </div> 
+ <footer> 
+  <p style="font-size: 12px; text-align: center;">Copyright<br>&copy; Entaytion<br>2023</p> 
+</footer> 
+  </body> 
 </html>
