@@ -58,14 +58,20 @@
         transform-origin: right; 
         transition-delay: 0.3s; 
       }
- 
-    /* Media query for mobile devices */
-      @media screen and (max-width: 480px) {
+	  
+      @media screen and (max-width: 1080px) {
         .button-container {
-          flex-direction: column;
-align-items: center;
+        flex-direction: column;
+		align-items: center;
         }
       }
+	  
+	    .button {
+    font-size: 100px;
+    padding: 16px 24px;
+  }
+}
+	  
     </style>
   </head> 
   <body> 
